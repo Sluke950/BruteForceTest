@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Hack Me</title>
+	</head>
+	<body>
+		<input type="text" id="input"><button id="set" onclick="setpass()">Set</button>
+		<p id="error"></p>
+		<script>
+			var setpassword;
+			var testpassword;
+			var password;
+			var guess;
+			
+			function setpass() {
+			
+			setpassword = document.getElementById("input").value;
+			testpassword = /^\d*$/.test(setpassword);
+			
+			if(testpassword == false) {
+				document.getElementById("error").innerHTML = "Numbers Only";
+			} else {
+				document.getElementById("error").innerHTML = "Password Set";
+				password = setpassword;
+			}
+			
+			
+}
+
+function hack() {
+	
+}
+		</script>
+	</body>
+</html>
